@@ -1,10 +1,10 @@
-#テーブル設計
+# テーブル設計
 
-## usersテーブル
+## users テーブル
 
-| Column             | Type   | options     |
+| Column             | Type   | Options     |
 | ------------------ | ------ | ----------- |
-| Name               | string | null: false |
+| name               | string | null: false |
 | email              | string | null: false |
 | encrypted_password | string | null: false |
 
@@ -26,12 +26,12 @@
 - has_many :users, through: :room_users
 - has_many :messages
 
-## room_user テーブル
+## room_users テーブル
 
-| Column  | Type       | Options                        |
-| ------- | ---------- | ------------------------------ |
-| user    | references | null: false, foreign_key: true |
-| room    | references | null: false, foreign_key: true |
+| Column | Type       | Options                        |
+| ------ | ---------- | ------------------------------ |
+| user   | references | null: false, foreign_key: true |
+| room   | references | null: false, foreign_key: true |
 
 ### Association
 
